@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             URL url = new URL(urlPath);
             connection = (HttpsURLConnection) url.openConnection();
             stream = connection.getInputStream();
-            reader = new BufferedReader(new InputStreamReader(stream));
+            reader = new BufferedReader(new InputStreamReader(stream, "Cp1251"));
             String line;
             while ((line=reader.readLine()) != null) {
                 xmlResult.append(line);
