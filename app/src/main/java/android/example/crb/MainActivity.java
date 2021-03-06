@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             stream = connection.getInputStream();
             reader = new BufferedReader(new InputStreamReader(stream, "Cp1251"));
             String line;
-            while ((line=reader.readLine()) != null) {
+            while((line=reader.readLine()) != null) {
                 xmlResult.append(line);
             }
 
