@@ -96,13 +96,11 @@ public class MainActivity extends AppCompatActivity {
          name.setTextColor(Color.BLACK);
          value.setTextColor(Color.BLACK);
 
-        nominalWithCode.setTextSize(17);
-        name.setTextSize(15);
-        value.setTextSize(15);
-
+         nominalWithCode.setTextSize(17);
+         name.setTextSize(15);
+         value.setTextSize(15);
 
          name.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
-
 
          layout.addView(name, textParams);
          layout.addView(nominalWithCode, textParams);
@@ -128,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
             stream = connection.getInputStream();
             reader = new BufferedReader(new InputStreamReader(stream, "Cp1251"));
             String line;
+
             while((line=reader.readLine()) != null) {
                 xmlResult.append(line);
             }
